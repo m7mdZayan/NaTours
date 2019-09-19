@@ -7,13 +7,13 @@ Dark green: #28b485
 
 */
 :root {
-  font-size: 10px;
+  font-size: 62.5%;
 }
 
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 body {
   font-family: "Lato", sans-serif;
@@ -21,6 +21,7 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 3rem;
+  box-sizing: border-box;
 }
 .header {
   height: 95vh;
@@ -32,15 +33,15 @@ body {
   position: relative;
   color: #fff;
 }
-.logo-box {
+.header__logo-box {
   position: absolute;
   left: 5rem;
   top: 4rem;
 }
-.header-logo {
+.header__logo {
   height: 3.5rem;
 }
-.header .header-content {
+.header__content {
   position: absolute;
   left: 50%;
   top: 40%;
@@ -48,7 +49,7 @@ body {
   text-align: center;
   text-transform: uppercase;
 }
-.header-content .primary-heading {
+.header__content--primary {
   display: block;
   font-weight: 400;
   letter-spacing: 2.5rem;
@@ -56,7 +57,7 @@ body {
   animation: moveInRight 1s ease-out;
   backface-visibility: hidden;
 }
-.header-content .sub-heading {
+.header__content--sub {
   display: block;
   font-weight: 700;
   letter-spacing: 1.8rem;
@@ -113,11 +114,11 @@ body {
   display: inline-block;
   font-size: 1.2em;
 }
-.btn-animated {
+.btn--animated {
   animation: moveInBottom 1s ease-out 0.4s;
   animation-fill-mode: backwards;
 }
-.btn-white {
+.btn--white {
   background-color: #fff;
   color: #777;
 }
