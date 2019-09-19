@@ -6,6 +6,9 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+:root {
+  font-size: 10px;
+}
 
 * {
   padding: 0;
@@ -16,9 +19,8 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  font-size: 16px;
   color: #777;
-  padding: 30px;
+  padding: 3rem;
 }
 .header {
   height: 95vh;
@@ -32,11 +34,11 @@ body {
 }
 .logo-box {
   position: absolute;
-  left: 50px;
-  top: 40px;
+  left: 5rem;
+  top: 4rem;
 }
 .header-logo {
-  height: 35px;
+  height: 3.5rem;
 }
 .header .header-content {
   position: absolute;
@@ -49,28 +51,28 @@ body {
 .header-content .primary-heading {
   display: block;
   font-weight: 400;
-  letter-spacing: 25px;
-  font-size: 60px;
+  letter-spacing: 2.5rem;
+  font-size: 6rem;
   animation: moveInRight 1s ease-out;
   backface-visibility: hidden;
 }
 .header-content .sub-heading {
   display: block;
   font-weight: 700;
-  letter-spacing: 18px;
-  font-size: 20px;
+  letter-spacing: 1.8rem;
+  font-size: 2rem;
   animation: moveInLeft 1s ease-out;
   backface-visibility: hidden;
-  margin-bottom: 40px;
+  margin-bottom: 4rem;
 }
 
 @keyframes moveInRight {
   0% {
-    transform: translate(-120px);
+    transform: translate(-12rem);
     opacity: 0;
   }
   60% {
-    transform: translate(15px);
+    transform: translate(1.5rem);
   }
   100% {
     transform: translate(0);
@@ -80,11 +82,11 @@ body {
 
 @keyframes moveInLeft {
   0% {
-    transform: translate(120px);
+    transform: translate(12rem);
     opacity: 0;
   }
   60% {
-    transform: translate(-15px);
+    transform: translate(-1.5rem);
   }
   100% {
     transform: translate(0);
@@ -93,7 +95,7 @@ body {
 }
 @keyframes moveInBottom {
   0% {
-    transform: translateY(-70px);
+    transform: translateY(-7rem);
     opacity: 0;
   }
   100% {
@@ -105,10 +107,11 @@ body {
 .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
-  border-radius: 80px;
+  padding: 1.5rem 4rem;
+  border-radius: 8rem;
   transition: all 0.3s;
   display: inline-block;
+  font-size: 1.2em;
 }
 .btn-animated {
   animation: moveInBottom 1s ease-out 0.4s;
@@ -119,9 +122,9 @@ body {
   color: #777;
 }
 .btn:hover {
-  transform: translateY(-3px);
+  transform: translateY(-0.3rem);
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 .btn:active {
-  transform: translateY(-1px);
+  transform: translateY(-0.1rem);
 }
