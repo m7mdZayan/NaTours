@@ -1,0 +1,135 @@
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+$color-grey-dark: #777;
+$color-white: #fff;
+
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $color-grey-dark;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right,
+      rgba($color-primary-dark, 0.8),
+      (rgba($color-primary-light, 0.8))
+    ),
+    url("../img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+  color: $color-white;
+}
+.header__logo-box {
+  position: absolute;
+  left: 5rem;
+  top: 4rem;
+}
+.header__logo {
+  height: 3.5rem;
+}
+.header__content {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -40%);
+  text-align: center;
+  text-transform: uppercase;
+}
+.header__content--primary {
+  display: block;
+  font-weight: 400;
+  letter-spacing: 2.5rem;
+  font-size: 6rem;
+  animation: moveInRight 1s ease-out;
+  backface-visibility: hidden;
+}
+
+.header__content--sub {
+  display: block;
+  font-weight: 700;
+  letter-spacing: 1.8rem;
+  font-size: 2rem;
+  animation: moveInLeft 1s ease-out;
+  backface-visibility: hidden;
+  margin-bottom: 4rem;
+}
+
+@keyframes moveInRight {
+  0% {
+    transform: translate(-12rem);
+    opacity: 0;
+  }
+  60% {
+    transform: translate(1.5rem);
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    transform: translate(12rem);
+    opacity: 0;
+  }
+  60% {
+    transform: translate(-1.5rem);
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    transform: translateY(-7rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  border-radius: 8rem;
+  transition: all 0.3s;
+  display: inline-block;
+  font-size: 1.2em;
+}
+.btn--animated {
+  animation: moveInBottom 1s ease-out 0.4s;
+  animation-fill-mode: backwards;
+}
+.btn--white {
+  background-color: $color-white;
+  color: $color-grey-dark;
+}
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+.btn:active {
+  transform: translateY(-0.1rem);
+}

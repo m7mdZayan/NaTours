@@ -1,0 +1,14 @@
+{
+  "name": "natoursme",
+  "version": "1.0.0",
+  "description": "\"landing page for Natours\"",
+  "main": "index.js",
+  "scripts": {
+    "compile-sass":"node-sass sass/main.scss css/style.css watch"
+  },
+  "author": "Mohamed Zayan",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
