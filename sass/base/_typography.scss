@@ -55,3 +55,14 @@ body {
     text-shadow: 0.5rem 0.2rem 2rem rgba($color-black, 0.2);
   }
 }
+.heading-tertiary {
+  font-size: $default-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.paragraph {
+  font-size: 1.7rem;
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
