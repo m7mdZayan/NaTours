@@ -17,6 +17,10 @@
     background-color: $color-white;
     color: $color-grey-dark;
   }
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+  }
   &:hover {
     transform: translateY(-0.3rem);
     box-shadow: 0 10px 10px rgba($color-black, 0.2);
