@@ -15,6 +15,10 @@
   transform: skewY(-7deg);
   margin-top: -9rem;
 
+  @include respond(tab-port) {
+    padding: 15rem 0;
+  }
+
   & > * {
     transform: skewY(7deg);
   }
@@ -24,14 +28,26 @@
   background-color: $color-grey-light1;
   padding: 30rem 0 25rem;
   margin-top: -9rem;
+
+  @include respond(tab-port) {
+    padding: 25rem 0 20rem;
+  }
 }
 
 .stories {
   padding: 15rem 0;
   position: relative;
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
 }
 .booking {
   padding: 15rem 0;
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
   background-image: linear-gradient(
     to right bottom,
     $color-primary-light,
@@ -47,11 +63,40 @@
       transparent 50%
     ),
     url(../img/nat-10.jpg);
-  background-size: cover;
+  background-size: 100%;
   border-radius: 5px;
   box-shadow: 0 1.5rem 3rem rgba($color-black, 0.2);
+
+  @include respond(tab-land) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.8) 0%,
+        rgba($color-white, 0.8) 65%,
+        transparent 65%
+      ),
+      url(../img/nat-10.jpg);
+    background-size: cover;
+  }
+
+  @include respond(tab-port) {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-white, 0.8) 0%,
+        rgba($color-white, 0.8) 100%
+      ),
+      url(../img/nat-10.jpg);
+  }
+
   &__form {
     width: 50%;
     padding: 6rem;
+
+    @include respond(tab-land) {
+      width: 65%;
+    }
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
   }
 }

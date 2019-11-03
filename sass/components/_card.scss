@@ -169,4 +169,47 @@
     transform: rotateY(0);
     cursor: pointer;
   }
+
+  @include respond(tab-port) {
+    height: auto;
+    border-radius: 8px;
+    background-color: $color-white;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+
+    &__side {
+      height: auto;
+      overflow: hidden;
+      position: relative;
+      box-shadow: none;
+      &--back {
+        transform: rotateY(0deg);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        margin-top: -2rem;
+      }
+    }
+
+    //back side
+
+    &__cta {
+      position: relative;
+      left: 0%;
+      top: 0%;
+      transform: translate(0);
+      width: 100%;
+      padding: 7rem 4rem 4rem;
+    }
+
+    &__price-box {
+      color: $color-white;
+    }
+
+    &__price-value {
+      margin-bottom: 4rem;
+      font-size: 4.5rem;
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(0);
+    }
+  }
 }
